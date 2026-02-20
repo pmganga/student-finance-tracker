@@ -40,3 +40,7 @@ To demonstrate creative localization and user-centric product design, this appli
 
 ## Demo Video
 [Insert your YouTube/Loom/Drive Link Here]
+
+## Live Deployment
+Test the live application on GitHub Pages:
+https://pmganga.github.io/student-finance-tracker/
