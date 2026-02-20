@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PesaWallet | Dashboard</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <header class="app-header">
+    <div class="brand-container">
+      <img src="images/financetrackerlogo.png" alt="PesaWallet Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="greeting">Karibu,</span>
+        <h1>PesaWallet</h1>
+      </div>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#records">Records</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="dashboard" aria-labelledby="dash-heading">
+      <h2 id="dash-heading">Overview & Budget</h2>
+      <div class="controls" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+        
+        <div class="control-group">
+          <label for="currency-selector">Display Currency:</label>
+          <select id="currency-selector" style="width: auto;">
+            <option value="KES" selected>KES - Kenyan Shilling</option>
+            <option value="UGX">UGX - Ugandan Shilling</option>
+            <option value="TZS">TZS - Tanzanian Shilling</option>
+            <option value="RWF">RWF - Rwandan Franc</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="budget-input">Set Monthly Budget (Base: KES):</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="number" id="budget-input" step="100" placeholder="e.g. 15000" style="width: 150px; margin: 0;">
+            <button id="save-budget-btn" class="btn-primary" style="width: auto; margin: 0; padding: 10px 15px;">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="stats-container" aria-live="polite">
+        </div>
+    </section>
+
+    <section id="add-transaction" aria-labelledby="form-heading">
+      <h2 id="form-heading">Log Expense / Income</h2>
+      <form id="txn-form" novalidate>
+        <div class="form-group">
+          <label for="txn-desc">Description (e.g., Matatu to CBD, HELB Loan):</label>
+          <input type="text" id="txn-desc" required aria-describedby="desc-error">
+          <span class="error-msg" id="desc-error" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="txn-amount">Amount:</label>
+          <input type="number" id="txn-amount" step="0.01" required aria-describedby="amt-error">
+          <span class="error-msg" id="amt-error" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="txn-cat">Category:</label>
+          <select id="txn-cat" required>
+            <option value="Food">Food & Mess</option>
+            <option value="Transport">Transport</option>
+            <option value="Accommodation">Hostel / Rent</option>
+            <option value="Education">Books & Fees</option>
+            <option value="Income">Income (HELB, Upkeep)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mpesa-code">M-Pesa Reference (Optional):</label>
+          <input type="text" id="mpesa-code" placeholder="e.g. QWE123RTY4" aria-describedby="mpesa-error">
+          <span class="error-msg" id="mpesa-error" role="alert"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Save Record</button>
+          <button type="button" id="btn-mpesa-stk" class="btn-secondary">Trigger M-Pesa STK Push</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="records" aria-labelledby="records-heading">
+      <h2 id="records-heading">Transaction History</h2>
+      
+      <div class="search-bar">
+        <label for="search-input" class="sr-only">Search transactions</label>
+        <input type="search" id="search-input" placeholder="Search records (e.g., 'Matatu', 'Food', or amount...)">
+        <span class="search-hint">💡 <strong>Pro-tip:</strong> You can use standard text or advanced Regular Expressions (Regex) to filter your history.</span>
+      </div>
+
+      <div class="table-responsive">
+        <table id="txn-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Ref</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="txn-body">
+            </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="scripts/main.js"></script>
+  <footer class="app-footer">
+    <p>&copy; 2026 Philip. All rights reserved.</p>
+    <p class="footer-subtext">Developed for the ALU Front-End Web Development Summative.</p>
+  </footer>
+</body>
+</html>
