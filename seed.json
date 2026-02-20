@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1708450000000",
+    "date": "2026-02-15",
+    "desc": "HELB Loan Disbursement",
+    "amount": 45000.00,
+    "cat": "Income",
+    "mpesa": "QE45RT67Y8"
+  },
+  {
+    "id": "1708450100000",
+    "date": "2026-02-10",
+    "desc": "Lunch at Student Mess with Alvin",
+    "amount": 150.50,
+    "cat": "Food",
+    "mpesa": ""
+  },
+  {
+    "id": "1708450200000",
+    "date": "2026-02-15",
+    "desc": "Coffee meeting with mentor Pauline Muthoni",
+    "amount": 600.00,
+    "cat": "Food",
+    "mpesa": "QF12AB34CD"
+  },
+  {
+    "id": "1708450300000",
+    "date": "2026-02-18",
+    "desc": "XAUUSD Gold Trade Profit",
+    "amount": 12500.00,
+    "cat": "Income",
+    "mpesa": ""
+  },
+  {
+    "id": "1708450400000",
+    "date": "2026-02-20",
+    "desc": "Matatu fare from Thika to CBD",
+    "amount": 100.00,
+    "cat": "Transport",
+    "mpesa": ""
+  },
+  {
+    "id": "1708450500000",
+    "date": "2026-02-09",
+    "desc": "Cat food and tick removal supplies",
+    "amount": 850.00,
+    "cat": "Food",
+    "mpesa": "QG98ZY76XW"
+  },
+  {
+    "id": "1708450600000",
+    "date": "2024-02-29",
+    "desc": "Hostel Deposit (Leap Year Entry)",
+    "amount": 5000.00,
+    "cat": "Accommodation",
+    "mpesa": "QA11BB22CC"
+  },
+  {
+    "id": "1708450700000",
+    "date": "2026-02-19",
+    "desc": "  Samosa   and smokie pasua  ",
+    "amount": 70.00,
+    "cat": "Food",
+    "mpesa": ""
+  },
+  {
+    "id": "1708451000000",
+    "date": "2026-02-12",
+    "desc": "Fare Fare to hackathon",
+    "amount": 50.00,
+    "cat": "Transport",
+    "mpesa": ""
+  }
+]
