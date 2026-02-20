@@ -39,7 +39,7 @@ To demonstrate creative localization and user-centric product design, this appli
 * **`Enter` / `Space`:** Trigger the M-Pesa STK push button, submit forms, or activate the "X" (Delete) buttons.
 
 ## Demo Video
-[Insert your YouTube/Loom/Drive Link Here]
+https://drive.google.com/file/d/1PyMk5_CT6mhH1PUVt43ta9fR4c8Tq8aC/view?usp=sharing
 
 ## Live Deployment
 Test the live application on GitHub Pages:
